@@ -1,0 +1,26 @@
+.hero {
+    background-size: cover;
+    background-image: url(images/Reviews-shoe-1600.jpg);
+    height: 600px;
+    background-position: center;
+    color: white;
+    align-items: center;
+  }
+  .nav__link {
+    color: white;
+  }
+  .img_card {
+    width: 300px;
+    box-shadow: var(--gray) 4px 4px 10px 2px;
+    border-radius: 3px;
+    margin: 30px;
+  }
+  
+  .img_card__img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  
+  .img_card__text {
+    padding: 0 12px;
+  }
