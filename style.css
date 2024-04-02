@@ -1,26 +1,123 @@
+:root {
+  --gray: hsl(217, 11%, 64%);
+  --primary-color: #e305ad;
+  --text-color: #000000;
+  --white: #FFFFFF;
+  --secondary-color: #f658b8;
+  --blue-purple: #819ae7;
+  --blue: #3e96d6;
+  --white: #FFFFFF;
+  --lightest-pink: #f29ad8; 
+  --purple-color: #bf98f2;
+  --space: 24px 
+}
+
+body {
+  font-size: 1.2rem;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;  
+}
 .hero {
-    background-size: cover;
-    background-image: url(images/Reviews-shoe-1600.jpg);
-    height: 600px;
-    background-position: center;
-    color: white;
-    align-items: center;
-  }
-  .nav__link {
-    color: white;
-  }
-  .img_card {
-    width: 300px;
-    box-shadow: var(--gray) 4px 4px 10px 2px;
-    border-radius: 3px;
+background-image: url(images/Reviews-shoe-1600.jpg);
+}
+.header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 3rem;
+  margin: 0;  
+}
+.nav__logo {
+  margin-right: auto;
+}
+.nav__container {
+  
+  row-gap: 10px;
+  min-width: 200px;
+  justify-items: center;
+  padding: 12px 0 24px;
+}
+.nav__link {
+  margin: calc(var(--space))
+}
+
+.nav__link, .nav__link--active {
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+}
+.nav__link::after, .nav__link--active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  margin-left: -90px;
+  width: 180px;
+}
+main.main {
+  margin: 30px;
+}
+
+.nav__link--active {
+  box-shadow: inset var(--secondary-color) 200px 0px 0px 1px;
+  padding: 0 70px;
+}
+.review {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+}
+.review__img {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 300px;
+}
+.figure {
+  grid-area: img;
+}
+.review__text {
+  grid-area: text;
+  grid-area: var(--text-color);
+  padding: 0 12px;
+
+
+.nav {
+    justify-self: center;
     margin: 30px;
   }
-  
-  .img_card__img {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+
+@media screen and (max-width: 1100px) {
+  .header__title {
+    font-size: 2rem;
   }
-  
-  .img_card__text {
-    padding: 0 12px;
+  .nav__container {
+    width: 80vw;
+    min-width: 300px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nav__link, .nav__link--active {
+    text-decoration: underline;
+  }
+  .nav__link--active {
+    padding: 0;
+  }
+  .nav__link::after, .nav__link--active::after {
+    display: none;}
+
+  body {
+    grid-template-areas: 
+    'header'
+    'nav'
+    'main'
+    'footer';
+  }
+  .review__container {
+    justify-self: center;
   }
