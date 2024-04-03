@@ -9,7 +9,14 @@
   --lightest-pink: #f29ad8; 
   --purple-color: #bf98f2; 
 }
-
+hr {
+  border-style: groove;
+  border-color: var(--lightest-pink);
+  padding: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -359,10 +366,12 @@ img_card__img {
   display: grid;
   grid-template-columns: 350px 1fr;
   padding: 50px;
+  justify-items: center;
+  align-items: center;
 }
 .review__img {
   border-radius: 50%;
-  width: 300px;
+  width: 275px;
 }
 
 figcaption {
@@ -372,6 +381,15 @@ figcaption {
 
 .review__text {
   padding: 0 12px;
+}
+.vidbottom {
+  text-align: center;
+  margin-top: 50px;
+} 
+
+iframe {
+margin: 10px;
+}
 
 @media (max-width: 768px) {
   header, .nav, .hero-container {
