@@ -361,13 +361,13 @@ img_card__img {
   padding: 50px;
 }
 .review__img {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-radius: 50%;
   width: 300px;
 }
 
 figcaption {
   max-width: 275px;
+  text-align: center;
 }
 
 .review__text {
